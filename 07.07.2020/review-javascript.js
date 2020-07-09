@@ -34,10 +34,14 @@ function onReviewSubmit() {
 
     console.log(localStorage.getItem("registrations"));
     console.log(JSON.parse(localStorage.getItem("registrations")));
+
     var registrationList = JSON.parse(localStorage.getItem("registrations")) || [];
 
+	// pushimiseks vaja JSON.parse
     registrationList.push(new Person(firstnameVal, lastname, phone, email));
 
+    console.log(registrationList);
+    console.log(JSON.stringify(registrationList));
     localStorage.setItem("registrations", JSON.stringify(registrationList));
 
 

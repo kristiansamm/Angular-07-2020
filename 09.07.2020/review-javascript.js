@@ -45,18 +45,9 @@ function onReviewSubmit() {
     localStorage.setItem("registrations", JSON.stringify(registrationList));
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+    function onBack() {
+        localStorage.setItem("editmode", true);
+
+
+    }

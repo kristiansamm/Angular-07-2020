@@ -1,3 +1,13 @@
+#main {
+
+    color: black;
+    padding-top: 150px;
+    padding-right: 50px;
+    padding-bottom: 150px;
+    padding-left: 50px;
+    text-align: center;
+    }
+
 .inactive-button {
     color: brown;
 }
@@ -12,4 +22,8 @@
 
 #coffee {
     color: blue;
+}
+
+body {
+    background-color: grey;
 }

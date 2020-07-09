@@ -1,0 +1,15 @@
+.inactive-button {
+    color: brown;
+}
+
+.inactive-button:hover {
+    cursor: pointer;
+}
+
+.inactive {
+    text-decoration: line-through;
+}
+
+#coffee {
+    color: blue;
+}

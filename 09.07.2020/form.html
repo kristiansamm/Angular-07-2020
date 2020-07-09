@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- src (src) -->
+<script src="form-javascript.js" defer></script>
+<!-- link (css) -->
+<link rel="stylesheet" href="form-style.css">
+</head>
+<body>
+    <div id="main">
+<a href="kodu.html">Mine kodulehele!</a>
+<br>
+<br>
+<h3>Sisesta oma kontaktandmed:</h3>
+<form name="registrationForm" onsubmit="onSubmit(event)">
+      <label>Eesnimi:</label><br>
+      <input type="text" id="firstname" pattern="^[a-zA-Z]*$" placeholder="Eesnimi" required><br>
+      <label>Perekonnanimi:</label><br>
+      <input type="text" id="lastname" placeholder="Perekonnanimi" required><br>
+      <label>Sisesta telefoninumber:</label><br>
+      <input type="number" id="phone" pattern="[0-9]" placeholder="Telefoninumber" required><br>
+      <label>Sisesta E-Mail:</label><br>
+      <input type="email" id="mail" placeholder="E-Mail" required><br>
+      <br>
+      <input type="submit" value="Sisesta">
+    </form> 
+
+    <br><br><br>
+    <div id="registrations"></div>
+</div>
+
+</body>
+</html>

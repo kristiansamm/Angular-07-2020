@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
+
+* {
+    font-family: 'Galada', cursive;
+}
+
+body {
+    background-color: rgb(250, 250, 250);
+}
+
+*:focus {
+    outline: none;
+}

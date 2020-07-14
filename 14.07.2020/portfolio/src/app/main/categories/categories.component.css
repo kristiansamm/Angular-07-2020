@@ -1,0 +1,38 @@
+#categories {
+    display: flex;
+    justify-content: space-around;
+
+    margin: 0 auto;
+    max-width: 1000px;
+
+}
+
+.category {
+    margin: 15px 5px;
+    padding: 15px;
+    border-radius: 5px;
+    background: white;
+
+}
+
+.category img {
+    height: 150px;
+    width: 250px;
+}
+
+.category:hover, .category img:hover {
+    cursor: pointer;
+}
+
+.category:hover {
+    box-shadow: 0 8px 17px 0 black;
+    transform: scale(1.1);
+    transition: .6s;
+}
+
+category-image {
+    /* height: 150px;
+    width: 250px; */
+}
+
+.category-description {}

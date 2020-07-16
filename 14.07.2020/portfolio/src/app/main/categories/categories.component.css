@@ -4,6 +4,7 @@
 
     margin: 0 auto;
     max-width: 1000px;
+    text-align: center;
 
 }
 
@@ -12,6 +13,7 @@
     padding: 15px;
     border-radius: 5px;
     background: white;
+    margin-top: 40px;
 
 }
 
@@ -25,7 +27,7 @@
 }
 
 .category:hover {
-    box-shadow: 0 8px 17px 0 black;
+    box-shadow: 0 8px 17px 0 rgb(55, 0, 255);
     transform: scale(1.1);
     transition: .6s;
 }

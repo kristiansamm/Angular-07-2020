@@ -1,0 +1,41 @@
+<form #catInputForm="ngForm" (ngSubmit)="onSubmitForm(catInputForm)">
+    <label>Kassi tõug:</label><br>
+    <input ngModel name="breed" type="text"><br>
+    <label>Kassi nimi:</label><br>
+    <input ngModel name="name" type="text"><br>
+    <label>Kassi pilt:</label><br>
+    <input ngModel name="picture" type="url"><br><br>
+  
+    <button [disabled]="!catInputForm.valid" type="submit" class="btn btn-secondary">VAJUTA MIND</button>
+  </form>
+  
+  <br>
+  
+  {{ titleText }}
+  <br><br><br>
+  
+  <div *ngIf="catsArray.length == 0"> <i> Kasse pole lisatud </i></div>
+  <div *ngFor="let cat of catsArray; let i = index">
+
+    <b> {{ cat.name | uppercase }}: </b>
+     {{i+1}}. Kassid:
+      {{ cat.breed | lowercase}} <br>
+     <img [routerLink]="['item', cat.breed, cat.name]" src="{{ cat.picture }}" class="picture">
+     <button (click)="onDeleteCat(i)">Kustuta kass</button>
+  </div>
+  
+  <br><br>
+  
+  <button (click)="onGenerate()">GENEREERI SUVALINE ARV</button>
+  
+  <br><br>
+  
+  
+  <div *ngIf="randomNumbers.length == 0"> <i> Numbreid ei ole genereeritud </i></div>
+  <div *ngFor="let randomNumber of randomNumbers; let i = index" [routerLink]="[number,i, randomNumber]">
+  {{i+1}}. genereeritud number: {{ randomNumber }}
+  <button (click)="onDelete(i)">X</button>
+  </div>
+  
+  
+  

@@ -1,0 +1,40 @@
+<br>
+ <div class="form-text">
+  <u><h2> {{ titleText }} </h2></u>
+
+<div class="form">
+<form #carInputForm="ngForm" (ngSubmit)="onSubmitForm(carInputForm)">
+  <br>
+  <div id="main">
+  <label>Auto mark</label>  - 
+  <input ngModel name="brand" type="text"> <br>
+  <div id="main">
+  <label>Auto mudel</label> - 
+  <input ngModel name="model" type="text"> <br>
+  <div id="main">
+  <label>Tootmise aasta </label> - 
+  <input ngModel name="year" type="text"> <br>
+  <div id="main">
+  <label>Auto pilt</label> - 
+  <input ngModel name="picture" type="url"> <br>
+
+  <button type="submit" onclick="alert('Lisasid uue auto nimistusse')" >Lisa auto!</button>
+
+
+
+  <div *ngIf="cars.length == 0"> <i> Ühtegi autot pole hetkel veel lisatud! </i> </div>
+
+
+  <div *ngFor="let car of cars; let i = index">
+<br>
+    <h2> Auto nr: {{i+1}}. </h2><br>
+    <br>
+    <b> {{ car.brand | uppercase }}: &nbsp; </b>
+    {{ car.model | uppercase }} <br>
+
+    <b>Tootmise aasta:</b> {{ car.year }} <br>
+  <br>
+    <img src="{{ car.picture }}" class="picture">
+    <button (click)="onDeleteCars(i)" class="btn btn-danger">Kustuta Auto</button>
+  </div>
+  </div>

@@ -1,0 +1,15 @@
+<form [formGroup]="computerEditForm" (ngSubmit)="onSubmit(computerEditForm)">
+    <label>Arvuti tootja nimi:</label><br>
+    <input formControlName="producer" type="text" required> <br>
+    <label>mudel:</label><br>
+    <input formControlName="model" type="text" required><br>
+    <label>Protsessor:</label><br>
+    <input formControlName="producer" type="text" required> <br>
+    <label>RAM:</label><br>
+    <input formControlName="ram" type="text" required><br>
+    <label>Emaplaat:</label><br>
+    <input formControlName="motherboard" type="text" required><br>
+    <label>Graafikakaart:</label><br>
+    <input formControlName="graphic_card" type="text" required><br>
+    <button [disabled]="computerEditForm.invalid" (click)="onSubmit(computerEditForm)" class="btn btn-success">Muuda arvutit</button>
+</form>

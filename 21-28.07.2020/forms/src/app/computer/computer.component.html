@@ -1,0 +1,28 @@
+
+<form #computerForm="ngForm" (ngSubmit)="onSubmit(computerForm)">
+    <label>Arvuti tootja nimi:</label><br>
+    <input ngModel name="producer" type="text" required> <br>
+    <label>mudel:</label><br>
+    <input ngModel name="model" type="text" required><br>
+    <label>Protsessor:</label><br>
+    <input ngModel name="producer" type="text" required> <br>
+    <label>RAM:</label><br>
+    <input ngModel name="ram" type="text" required><br>
+    <label>Emaplaat:</label><br>
+    <input ngModel name="motherboard" type="text" required><br>
+    <label>Graafikakaart:</label><br>
+    <input ngModel name="graphic_card" type="text" required><br>
+    <button [disabled]="computerForm.invalid" class="btn btn-success">Lisa arvuti</button>
+</form>
+
+
+<div *ngFor="let computer of computers; let i = index">
+    <br><br>
+    {{ computer.producer }} <br>
+    {{ computer.model }} <br>
+    {{ computer.processor }} <br>
+    {{ computer.ram }} <br>
+    {{ computer.motherboard }} <br>
+    {{ computer.graphic_card }} <br>
+    <button [routerLink]="[i]">Muuda arvutit</button>
+</div>

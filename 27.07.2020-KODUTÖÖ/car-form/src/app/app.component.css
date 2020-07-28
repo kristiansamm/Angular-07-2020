@@ -1,0 +1,43 @@
+
+div.form
+{
+    display: block;
+    text-align: center;
+    background-color: gray;
+    border-radius: 30px;
+    width: 400px;
+    height: 225px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+/* .main {
+    background-color: green;
+    align-items: left;
+} */
+
+
+.form-text
+{
+    
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
+
+}
+
+
+.picture {
+    width: 450px;
+    height: 350px;
+    
+}
+
+.button {
+    margin-top: -300px;
+    align-items: right;
+}

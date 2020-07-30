@@ -1,0 +1,8 @@
+
+<div class="items-list">
+  <div *ngFor="let item of items; let i = index" class="item" [routerLink]="['view',i]">
+    <img src="{{ item.imgSrc }}">
+     <p> {{ item.title }} </p>   
+     <p> {{ item.price }} </p>  
+  </div>
+</div>

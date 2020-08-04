@@ -1,0 +1,15 @@
+<br><br><br><br><br><br> 
+<p>Uue sisendi lisamine!</p>
+<form #newItemForm="ngForm" (ngSubmit)="onSubmit(newItemForm)">
+  <label>Title</label><br>
+  <input ngModel name="title" type="text" required><br>
+  <label>Price</label><br>
+  <input ngModel name="price" type="number" required><br>
+  <label>Image link</label><br>
+  <input ngModel name="imgSrc" type="url" required><br>
+  <label>Category</label><br>
+  <input ngModel name="category" type="text" required><br>
+  
+  <br>
+<button [disabled]="newItemForm.invalid">Add item</button>
+</form>

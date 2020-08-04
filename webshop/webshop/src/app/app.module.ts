@@ -1,5 +1,7 @@
+  
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +14,8 @@ import { AuthenticationComponent } from './authentication/authentication.compone
 import { LoginComponent } from './authentication/login/login.component';
 import { SignupComponent } from './authentication/signup/signup.component';
 import { NotFoundComponent } from './global/not-found/not-found.component';
+import { HeaderComponent } from './global/menu/header/header.component';
+import { ItemNewComponent } from './item/item-new/item-new.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +28,15 @@ import { NotFoundComponent } from './global/not-found/not-found.component';
     AuthenticationComponent,
     LoginComponent,
     SignupComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HeaderComponent,
+    ItemNewComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

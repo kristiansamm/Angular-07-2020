@@ -6,7 +6,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0 auto;
-  margin-top: 150px;
+  margin-top: 215px;
+  margin-bottom: 200px;
 }
 
 .item {
@@ -23,11 +24,13 @@
   transition: .5s all;
   box-shadow: 0 8px 17px 0 rgba(212, 29, 70, 0.05), 
   0 6px 10px 0 rgba(0,0,0,.15);
+  background-color: lightgrey;
 }
 
 .item:hover img {
   transition: transform 1.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform: scale(1.1);
+
 }
 
 .item img {

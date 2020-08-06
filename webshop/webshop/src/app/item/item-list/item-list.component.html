@@ -1,6 +1,16 @@
 
+<mat-form-field appearance="fill">
+  <mat-label>Select item category</mat-label>
+  <mat-select [(ngModel)]="selectedCategory">
+    <mat-option value="">All items</mat-option>
+    <mat-option *ngFor="let item of items | unique" [value]="item.category">
+      {{item.category}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
 <div class="items-list">
-  <div *ngFor="let item of items; let i = index" class="item" [routerLink]="['view',i]">
+  <div *ngFor="let item of items | categoryFilter:selectedCategory; let i = index" class="item" [routerLink]="['view',i]">
     <img src="{{ item.imgSrc }}">
      <p> {{ item.title }} </p>   
      <p> {{ item.price }} </p>  

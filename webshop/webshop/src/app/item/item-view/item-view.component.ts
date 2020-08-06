@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ItemService } from '../item.service';
 import { ActivatedRoute, Params } from '@angular/router';
+import { ItemService } from '../item.service';
+import { Item } from '../item.model';
+import { CartService } from '../../cart/cart.service';
 
 @Component({
   selector: 'app-item-view',
@@ -8,18 +10,22 @@ import { ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./item-view.component.css']
 })
 export class ItemViewComponent implements OnInit {
-  item: {imgSrc: string, title: string, price: string, category: string}
+  item: Item;
 
   constructor(
     private itemService: ItemService, 
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private cartService: CartService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params)=>{
       let id = params['id'];
     this.item = this.itemService.getItem(id);
-  })
-  console.log(this.item);
+  });
   }
 
+  onAddToCart() {
+    console.log("addisin");
+    this.cartService.addItem(this.item);
+  }
 }

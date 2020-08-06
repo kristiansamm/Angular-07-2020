@@ -1,0 +1,18 @@
+<div *ngIf="itemsInCart.length > 0; else noItemsInCart">
+  <button (click)="onEmptyCart()">Empty cart</button>
+
+  <div class="cart-items">
+    <div class="cart-item" *ngFor="let item of itemsInCart; let i = index">
+      <h3>{{'Item selected:'}} </h3> {{ item.title }} 
+      <br><br>
+      <img src="{{ item.imgSrc}}">
+      <br><br>
+      <div>{{'Item price is:'}} {{ item.price }}</div>
+      <br>
+      <button (click)="onRemoveFromCart(i)">{{ 'Remove from cart' }}</button>
+      <br><br>
+    </div>
+  </div>
+</div>
+
+<ng-template #noItemsInCart> {{ 'No items in cart, please add!' }} </ng-template>

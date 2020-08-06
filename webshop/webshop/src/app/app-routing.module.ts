@@ -6,6 +6,7 @@ import { SignupComponent } from './authentication/signup/signup.component';
 import { ItemViewComponent } from './item/item-view/item-view.component';
 import { NotFoundComponent } from './global/not-found/not-found.component';
 import { ItemNewComponent } from './item/item-new/item-new.component';
+import { CartComponent } from './cart/cart.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'view/:id', component: ItemViewComponent },
   { path: 'item/new', component: ItemNewComponent },
+  { path: 'cart', component: CartComponent },
   { path: '**', component: NotFoundComponent },
 ];
 

@@ -1,12 +1,11 @@
-<br><br><br><br><br><br><br>
-
 <div class="item-view">
-  <h3>{{'Vaatad toodet:'}} </h3> {{ item.title }} 
+  <h3>{{'Item selected:'}} </h3> {{ item.title }} 
   <br><br>
   <img src="{{ item.imgSrc}}">
   <br><br>
-  <div>{{'Toote hind:'}} {{ item.price }}</div>
-
+  <div>{{'Item price is:'}} {{ item.price }}</div>
+<br>
+<button (click)="onAddToCart()"> {{ 'Add to cart' }} </button>
 </div>
 
 

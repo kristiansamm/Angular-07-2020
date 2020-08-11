@@ -1,6 +1,8 @@
 <div *ngIf="itemsInCart.length > 0; else noItemsInCart">
   <button (click)="onEmptyCart()">Empty cart</button>
 
+  <div>Cart sum total: {{ sumOfCart }} $</div>
+
   <div class="cart-items">
     <div class="cart-item" *ngFor="let item of itemsInCart; let i = index">
       <h3>{{'Item selected:'}} </h3> {{ item.title }} 

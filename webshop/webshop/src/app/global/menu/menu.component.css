@@ -16,3 +16,12 @@
   margin: 20px;
   
 }
+
+.cartItemsCount {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background-color: rgb(9, 255, 0);
+  padding: 0 5px;
+  margin: ;
+}

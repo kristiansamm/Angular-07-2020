@@ -4,6 +4,9 @@
   <app-header></app-header>
   <div>
     <div class="menu-link" routerLink="login"><h3>Login / Signup</h3></div>
-    <div class="menu-link" routerLink="cart">Cart</div>
+    <div class="menu-link" routerLink="cart">
+     <span class="cartItemsCount">{{ cartItemsCount }}</span>
+      Cart
+    </div>
   </div>
 </div>

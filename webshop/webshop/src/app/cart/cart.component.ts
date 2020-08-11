@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from './cart.service';
 import { Item } from '../item/item.model';
+import { ToastService } from 'angular-toastify';
 
 @Component({
   selector: 'app-cart',
@@ -11,7 +12,8 @@ export class CartComponent implements OnInit {
   itemsInCart: Item[];
   sumOfCart: number;
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService,
+  private _toastService: ToastService) { }
 
   ngOnInit(): void {
     this.getItemsFromService();
@@ -28,6 +30,7 @@ export class CartComponent implements OnInit {
     this.cartService.removeItem(i);
     this.getItemsFromService();
     this.getCartSum();
+    this._toastService.warn('Item removed from cart!');
   }
 
   getCartSum() {

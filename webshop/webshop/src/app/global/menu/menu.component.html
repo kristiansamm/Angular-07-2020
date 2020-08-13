@@ -2,11 +2,12 @@
 <div class="menu">
   <img src="assets\header.png" routerLink="/">
   <app-header></app-header>
+  <!-- <div class="pdlssi"><img src="assets\Car2.png"></div> -->
   <div>
-    <div class="menu-link" routerLink="login"><h3>Login / Signup</h3></div>
-    <div class="menu-link" routerLink="cart">
-     <span class="cartItemsCount">{{ cartItemsCount }}</span>
-      Cart
+    <div class="menu-link-login" routerLink="login"><h3>Login / Signup</h3></div>
+    <div class="menu-link-cart" routerLink="cart">
+     <span *ngIf="cartItemsCount > 0" class="cartItemsCount">{{ cartItemsCount }}</span>
+     <img src="assets\Car2.png" id="icon" alt="User Icon" /> Cart
     </div>
   </div>
 </div>

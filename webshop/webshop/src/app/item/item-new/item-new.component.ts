@@ -16,6 +16,8 @@ export class ItemNewComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     console.log(form.value);
-    this.itemService.addItem(form.value);
+    let newItem = form.value;
+    newItem.price = "$"+newItem.price
+    this.itemService.addItem(newItem);
   }
 }

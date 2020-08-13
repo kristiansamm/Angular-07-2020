@@ -1,0 +1,13 @@
+.admin-items-list {
+  margin: 3% 1%;
+}
+
+.item {
+  margin-top: 1%;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.inactive {
+  border: 1px solid red !important;
+}

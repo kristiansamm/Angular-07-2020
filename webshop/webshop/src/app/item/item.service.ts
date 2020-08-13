@@ -17,7 +17,10 @@ export class ItemService {
   }
 
   getItems(): Item[] { 
-    return this.items.slice();
+    let itemsList = this.items;
+    itemsList = itemsList.map(item => ({...item, visible: true  }) );
+    console.log(itemsList);
+      return itemsList.slice();
   }
 
   getItem(i: number): Item { 
@@ -26,5 +29,8 @@ export class ItemService {
 
   removeItem(i: number): void {
     this.items.splice(i, 1);
+  }
+  changeVisibleState(i: number): void {
+    this.items[i]["visible"] = !this.items[i]["visible"]
   }
 }

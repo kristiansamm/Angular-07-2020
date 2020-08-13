@@ -1,2 +1,8 @@
-<div><h1>{{'Veebipood' | uppercase}}</h1></div>
-<button routerLink="item/new">Lisa esemeid</button>
+  
+<br><div>{{'Veebipood' | translate | uppercase}}</div>
+<br><button routerLink="item/new">{{'Add items' | translate}}</button>
+<br><button routerLink="item/viewall">View items</button>
+<div>
+  <button (click)="useLanguage('en')">en</button>
+  <button (click)="useLanguage('ee')">ee</button>
+</div>

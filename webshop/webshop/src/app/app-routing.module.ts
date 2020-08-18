@@ -8,6 +8,7 @@ import { NotFoundComponent } from './global/not-found/not-found.component';
 import { ItemNewComponent } from './item/item-new/item-new.component';
 import { CartComponent } from './cart/cart.component';
 import { ItemAllComponent } from './item/item-all/item-all.component';
+import { ItemEditComponent } from './item/item-edit/item-edit.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'registrate', redirectTo: 'signup' },
   { path: 'signup', component: SignupComponent },
   { path: 'view/:id', component: ItemViewComponent },
+  { path: 'edit/:id', component: ItemEditComponent },
   { path: 'item/new', component: ItemNewComponent },
   { path: 'item/viewall', component: ItemAllComponent },
   { path: 'cart', component: CartComponent },

@@ -1,7 +1,7 @@
   
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
@@ -28,6 +28,8 @@ import { UniquePipe } from './item/item-list/unique.pipe';
 import { CategoryFilterPipe } from './item/item-list/category-filter.pipe';
 import { CartComponent } from './cart/cart.component';
 import { ItemAllComponent } from './item/item-all/item-all.component';
+import { SidebarComponent } from './global/sidebar/sidebar.component';
+import { ItemEditComponent } from './item/item-edit/item-edit.component';
 
 export function createHttploader(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -51,12 +53,15 @@ export function createHttploader(http: HttpClient) {
     CategoryFilterPipe,
     CartComponent,
     ItemAllComponent,
+    SidebarComponent,
+    ItemEditComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatSelectModule,
     AngularToastifyModule,

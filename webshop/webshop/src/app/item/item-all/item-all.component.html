@@ -9,6 +9,9 @@
   </mat-select>
 </mat-form-field>
 
+<br>
+<button (click)="onSendToDb()">Send all items to Database</button>
+
 <div class="admin-items-list">
   <div *ngFor="let item of items | categoryFilter:selectedCategory; let i = index" 
   class="item" [class.inactive]="!item.visible" (click)="onInactive(i)">

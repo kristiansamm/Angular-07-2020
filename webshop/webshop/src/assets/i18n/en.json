@@ -1,6 +1,9 @@
 {
+  "cart": "Cart",
   "Add items": "Add items",
-  "Veebipood": "Webshop"
+  "Veebipood": "Webshop",
+  "Order by": "Order by",
+  "Price- Highest first": "Price - Highest first"
 
 
 }

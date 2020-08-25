@@ -1,7 +1,9 @@
 {
+  "cart": "Ostukorv",
   "Add items": "Lisa esemeid",
-  "Veebipood": "Veebipood"
-
+  "Veebipood": "Veebipood",
+  "Order by": "Vali kategooria",
+  "Price- Highest first": "Hind - Kõrgeim enne"
 
 
 }

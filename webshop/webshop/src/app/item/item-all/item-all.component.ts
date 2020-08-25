@@ -23,6 +23,11 @@ export class ItemAllComponent implements OnInit {
       // // this.items [i].visible
       this.itemService.changeVisibleState(i);
       this.items = this.itemService.getItems();
+  }
 
+      onSendToDb() {
+        this.items = this.items.map(item => ({...item, price: item.price.split("$")[2] ? item.price.split("$")[2] : item.price.split("$")[1]  }))
+
+        this.itemService.saveItems(this.items);
     }
 }

@@ -23,6 +23,11 @@
   margin-right: 200px;
 }
 
+.menu-link {
+  margin: 20px;
+  cursor: pointer;
+}
+
 .cartItemsCount {
   border-radius: 50%;
   height: 20px;

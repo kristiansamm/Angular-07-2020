@@ -21,6 +21,7 @@ export class ItemEditComponent implements OnInit {
     private itemService: ItemService, 
     private route: ActivatedRoute, 
     private router: Router, 
+    private translateService: ToastService,
 
     private toastService: ToastService) { }
 
@@ -54,9 +55,8 @@ export class ItemEditComponent implements OnInit {
     this.toastService.success(this.translate.instant('Item changed!'));
 
 setTimeout(()=>{ 
-  this.router.navigateByUrl("")
-})
-    // this.router.navigate("..",{relativeTo: this.route});
-
- }
+  this.router.navigateByUrl("/");
+ }, 1500)
 }
+}
+    // this.router.navigate("..",{relativeTo: this.route});

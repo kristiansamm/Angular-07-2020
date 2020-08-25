@@ -42,3 +42,7 @@
   padding: 15px;
 }
 
+.items-sort {
+  display: flex;
+  justify-content: space-around;
+}

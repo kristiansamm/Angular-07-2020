@@ -33,6 +33,7 @@ export class ItemNewComponent implements OnInit {
       form.value.title,
       form.value.price,
       form.value.category,
+      true
     )
 
     this.itemService.addNewItem(newItem);

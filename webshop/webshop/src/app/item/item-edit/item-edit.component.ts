@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Form } from '@angular/forms';
 import { Item } from '../item.model';
 import { ItemService } from '../item.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
@@ -46,17 +46,27 @@ export class ItemEditComponent implements OnInit {
   }
 
   onSubmit(form: FormGroup) {
+  // let updatedItem = new Item(
     // console.log(form);
     // console.log(form.value);
     // console.log(form.value.title);
     // console.log(form.value["price"]);
-    this.itemService.updateitem(this.id, form.value);
-    // this.router.navigateByUrl("/item/viewall");
-    this.toastService.success(this.translate.instant('Item changed!'));
+
+    let updatedItem = new Item(
+      form.value.imgSrc,
+      form.value.title,
+      form.value.price,
+      form.value.category,
+      true
+    )
+
+    this.itemService.updateItem(this.id, updatedItem);
+    this.toastService.success(this.translate.instant ('Item changed!'));
 
 setTimeout(()=>{ 
   this.router.navigateByUrl("/");
  }, 1500)
-}
-}
+
     // this.router.navigate("..",{relativeTo: this.route});
+  }
+}

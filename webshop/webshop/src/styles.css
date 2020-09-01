@@ -1,5 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Courgette&family=Roboto:wght@300&display=swap');
+
+* {
+
+  font-family: 'Courgette', cursive;
+
+}
+
 body {
   background-color: GRAY;
 }
@@ -20,3 +28,4 @@ input.ng-invalid.ng-touched {
   margin-top: 100px;
   margin-bottom: 425px;
 }
+

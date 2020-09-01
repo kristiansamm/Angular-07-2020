@@ -9,7 +9,7 @@ import { ToastService } from 'angular-toastify';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  itemsInCart: Item[];
+  itemsInCart: Item[] = [];
   sumOfCart: number;
 
   constructor(private cartService: CartService,
@@ -21,7 +21,7 @@ export class CartComponent implements OnInit {
   }
 
   getItemsFromService(): void {
-    let itemsInCart = this.cartService.getItems();
+    this.itemsInCart = this.cartService.getItems();
     // this.itemsInCart = itemsFromService.map(item => ({...item, price: item.price.split("$")[2] ? item.price.split("$")[2] : item.price.split("$")[1]  }));
   }
 

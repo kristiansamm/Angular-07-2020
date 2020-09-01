@@ -1,8 +1,44 @@
-.cart-item {
-  margin: 10% 30%;
+.spacer {
+  width: 90%;
+  margin: 0 auto;
+  background: white;
+  margin-top: 50px;
+  margin-right: 75px;
+  padding: 15px;
 }
 
-.cart-item img {
-  width: 300px;
-  height: 300px;
+.cart-item {
+display: flex;
+padding: 20px 0;
+border-bottom: 1px solid gray;
+}
+
+.item-img {
+  width: 100px;
+  height: 100px;
+}
+
+.no-items {
+  margin: 150px 500px;
+  font-size: 20px;
+}
+
+.cell {
+  flex-basis: 300px;
+  padding-left: 50px;
+  padding-top: 3%;
+  font-size: 1.2em;
+
+}
+
+.delete-button {
+  padding-top: 2%;
+  height: 50px;
+  opacity: 0.7;
+}
+
+.delete-button:hover {
+  cursor: pointer;
+  opacity: 1;
+  transition: .5s;
 }

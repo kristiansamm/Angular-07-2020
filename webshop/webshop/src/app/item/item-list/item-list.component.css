@@ -6,7 +6,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0 auto;
-  margin-bottom: 200px;
+  /* margin-bottom: 200px; */
 }
 
 .item {

@@ -1,3 +1,4 @@
+<div class="items-page">
 <div class="items-sort">
   <mat-form-field appearance="fill">
     <mat-label>Select item category</mat-label>
@@ -27,8 +28,8 @@
   <div 
   *ngFor="let item of itemsShown | categoryFilter:selectedCategory; 
     let i = index" 
-    class="item" 
-    [routerLink]="['view',i]">
+  
+    [routerLink]="['view',item.firebaseId]" class="item" >
   <div *ngIf="item.visible">
 
       <img src="{{ item.imgSrc }}">
@@ -36,4 +37,5 @@
       <p> {{ item.price }} </p> 
     </div> 
   </div>
+</div>
 </div>

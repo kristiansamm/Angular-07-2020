@@ -2,9 +2,10 @@
   <div *ngIf="itemsInCart.length > 0; else noItemsInCart">
 
     <div class="spacer"> 
-  <button (click)="onEmptyCart()">Empty cart</button>
+  <button class="main-button" (click)="onEmptyCart()">{{'Empty cart' | translate }}</button>
+  
 
-  <div>Cart sum total: {{ sumOfCart }} $</div>
+  <div class="cart-sum">Cart sum total: {{ sumOfCart }} €</div>
 
   <div class="cart-items">
     <div class="cart-item" *ngFor="let item of itemsInCart; let i = index">
@@ -21,7 +22,7 @@
 
 <ng-template #noItemsInCart>
   <div class="no-items"> 
-    {{ 'No items in cart, please add!' }} 
+    {{ 'No items in cart, please add!' | translate }} 
   </div>
 </ng-template>
 

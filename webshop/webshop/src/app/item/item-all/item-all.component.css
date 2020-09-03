@@ -6,8 +6,46 @@
   margin-top: 1%;
   border: 1px solid black;
   border-radius: 5px;
+  padding: 10px;
 }
 
 .inactive {
   border: 1px solid red !important;
+}
+
+button {
+  cursor: pointer;
+
+}
+
+.shortened {
+  font-size: 0.9em !important;
+  padding: 6px !important;
+}
+
+/*  -------------------------------------  BUTTON SENT TO STYLES.CSS
+#to-database-button {
+  background-color: #ca2727;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.to-database-button:hover {
+  opacity: 1.0;
+  transition: .5s;
+} */
+
+@media (min-width: 1200px) {
+  .item {
+    /* background-color: lightblue !important; */
+    width: 50%;
+  }
 }

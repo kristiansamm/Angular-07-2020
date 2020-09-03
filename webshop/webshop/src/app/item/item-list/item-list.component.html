@@ -1,9 +1,9 @@
 <div class="items-page">
 <div class="items-sort">
   <mat-form-field appearance="fill">
-    <mat-label>Select item category</mat-label>
+    <mat-label>{{'Select item category' | translate }}</mat-label>
     <mat-select [(ngModel)]="selectedCategory">
-      <mat-option value="">All items</mat-option>
+      <mat-option value="">{{'All items' | translate }}</mat-option>
       <mat-option *ngFor="let item of items | unique" [value]="item.category">
         {{item.category}}
       </mat-option>
@@ -14,7 +14,7 @@
   <mat-form-field appearance="fill">
     <mat-label>{{'Order by' | translate }}</mat-label>
     <mat-select>
-      <mat-option value="" (click)="onShowAll()">All items</mat-option>
+      <mat-option value="" (click)="onShowAll()">{{'All items' | translate }}</mat-option>
       <mat-option value="" (click)="onSortPriceAsc()">{{'Price- Highest first' | translate }}</mat-option>
       <mat-option value="" (click)="onSortPriceDesc()">{{'Price - Lowest first' | translate }}</mat-option>
       <mat-option value="" (click)="onSortTitleAsc()">{{'Title - A to Z' | translate }}</mat-option>

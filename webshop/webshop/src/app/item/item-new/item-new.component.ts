@@ -12,12 +12,11 @@ import { Item } from '../item.model';
   styleUrls: ['./item-new.component.css']
 })
 export class ItemNewComponent implements OnInit {
-  private translateService: ToastService;
-  private translate: TranslateService;
-  private router: Router;
-  toastService: any;
 
-  constructor(private itemService: ItemService) { }
+  constructor(private itemService: ItemService, 
+    private router: Router, 
+    private toastService: ToastService, 
+    private translate: TranslateService) {}
 
   ngOnInit(): void {
   }
@@ -35,6 +34,8 @@ export class ItemNewComponent implements OnInit {
       form.value.category,
       true
     )
+
+    console.log(form);
 
     this.itemService.addNewItem(newItem);
 

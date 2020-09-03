@@ -4,14 +4,14 @@
   <app-header></app-header>
   <!-- <div class="pdlssi"><img src="assets\Car2.png"></div> -->
   <div>
-    <div class="menu-link-login" routerLink="login"><h3>Login / Signup</h3></div>
+    <div class="menu-link-login" routerLink="login"><h3>{{'Login / Signup' | translate }}</h3></div>
     <div class="menu-link-cart" routerLink="cart">
      <span *ngIf="cartItemsCount > 0" class="cart-items-count">{{ cartItemsCount }}</span>
      <img src="assets\Car2.png" id="icon" alt="User Icon" />{{ 'Cart' | translate }} 
     </div>
     <div>
-      <span class="lang-button" (click)="useLanguage('en')">en</span>
-      <span class="lang-button" (click)="useLanguage('ee')">ee</span>
+      <span class="lang-button" (click)="useLanguage('en')">{{'en' | translate }}</span>
+      <span class="lang-button" (click)="useLanguage('ee')">{{'ee' | translate }}</span>
     </div>
   </div>
 </div>

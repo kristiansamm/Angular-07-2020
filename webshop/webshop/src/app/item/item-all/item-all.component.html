@@ -1,8 +1,7 @@
-
 <mat-form-field appearance="fill">
-  <mat-label>Select item category</mat-label>
+  <mat-label>{{'Select item category' | translate }}</mat-label>
   <mat-select [(ngModel)]="selectedCategory">
-    <mat-option value="">All items</mat-option>
+    <mat-option value="">{{'All items' | translate }}</mat-option>
     <mat-option *ngFor="let item of items | unique" [value]="item.category">
       {{item.category}}
     </mat-option>
@@ -10,7 +9,10 @@
 </mat-form-field>
 
 <br>
-<button (click)="onSendToDb()">Send all items to Database</button>
+<button class="main-button" (click)="onSendToDb()">{{'Send all items to Database' | translate }}</button>
+<br>
+
+<div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 
 <div class="admin-items-list">
   <div *ngFor="let item of items | categoryFilter:selectedCategory; let i = index" 
@@ -18,6 +20,6 @@
     <!-- [ngClass]="{'inactive': !item.visible}" -->
      <p> {{ item.title }} </p>   
      <p> {{ item.price }} </p>  
-     <button [routerLink]='["/edit",i]'>{{'Edit' }}</button>
+     <button class="main-button shortened" [routerLink]='["/edit",i]'>{{'Edit' | translate  }}</button>
   </div>
 </div>

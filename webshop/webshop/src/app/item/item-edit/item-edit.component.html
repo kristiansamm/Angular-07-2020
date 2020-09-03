@@ -1,17 +1,45 @@
-<p>Uue sisendi lisamine!</p>
+<!-- <p>{{'Edit item!' | translate }}</p>
 <form [formGroup]="editItemForm" (ngSubmit)="onSubmit(editItemForm)" class="item-form">
-  <label>{{'Title'}}</label><br>
+  <label>{{'Title' | translate }}</label><br>
   <input formControlName="title" type="text" required><br>
-  <label>{{'Price'}}</label><br>
+  <label>{{'Price' | translate }}</label><br>
   <input formControlName="price" type="text" required><br>
-  <label>{{'Image link'}}</label><br>
+  <label>{{'Image link' | translate }}</label><br>
   <input formControlName="imgSrc" type="url" required><br>
-  <label>{{'Category'}}</label><br>
+  <label>{{'Category' | translate }}</label><br>
   <input formControlName="category" type="text" required><br>
   
   <br>
-<button [disabled]="!editItemForm.valid">Edit item</button>
+<button [disabled]="!editItemForm.valid">{{'Edit item' | translate }}</button>
 </form>
+
+<lib-toastify-toast-container 
+[position]="'top-left'"
+[iconLibrary]="'font-awesome'"
+
+></lib-toastify-toast-container> -->
+
+<form [formGroup]="editItemForm" (ngSubmit)="onSubmit(editItemForm)" class="item-form">
+  <h2>{{'Edit item' | translate }}</h2>
+    <div class="user-box">
+      <input formControlName="title" type="text" required>
+      <label>{{'Title' | translate }}</label>
+    </div>
+    <div class="user-box">
+      <input formControlName="price" type="text" required>
+      <label>{{'Price' | translate }}</label>
+    </div>
+    <div class="user-box">
+      <input formControlName="imgSrc" type="url" required>
+      <label>{{'Image link' | translate }}</label>
+    </div>
+    <div class="user-box">
+      <input formControlName="category" type="text" required>
+      <label>{{'Category' | translate }}</label>
+    </div>
+    
+    <button class="main-button" [disabled]="!editItemForm.valid">{{'Edit item' | translate }}</button>
+  </form>
 
 <lib-toastify-toast-container 
 [position]="'top-left'"

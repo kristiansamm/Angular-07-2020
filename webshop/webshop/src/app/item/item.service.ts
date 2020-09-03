@@ -23,8 +23,8 @@ export class ItemService {
 
   getItems(): Item[] { 
     let itemsList = this.items;
-    itemsList = itemsList.map(item => ({...item, visible: true  }) );
-    console.log(itemsList);
+    // itemsList = itemsList.map(item => ({...item, visible: true  }) );
+    // console.log(itemsList);
       return itemsList.slice();
   }
 
